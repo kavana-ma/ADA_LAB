@@ -3,30 +3,6 @@
 
 int a[20],n;
 void simple_sort(int [],int,int,int);
-void merge_sort(int[],int,int);
-int main()
-{
-    int i;
-    clock_t start, end;
-    double time_taken;
-    printf("Enter the no. of elements:");
-    scanf("%d", &n);
-    printf("Enter the array elements:");
-    for (i = 0; i < n; i++) {
-        scanf("%d", &a[i]);
-    }
-    start = clock();
-    merge_sort(a, 0, n - 1);
-    end = clock();
-    time_taken = (double)(end - start) / CLOCKS_PER_SEC;
-    printf("Sorted array:");
-    for (i = 0; i < n; i++) {
-        printf("%d ", a[i]);
-    }
-    printf("\n");
-    printf("Time taken to sort: %f seconds\n", time_taken);
-    return 0;
-}
 void merge_sort(int a[],int low, int high){
     if(low<high){
         int mid=(low+high)/2;
@@ -58,4 +34,27 @@ void simple_sort(int a[],int low, int mid, int high){
     for(i=low;i<=high;i++){
         a[i]=c[i];
     }
+}
+int main()
+{
+    int i;
+    clock_t start, end;
+    double time_taken;
+    printf("Enter the no. of elements:");
+    scanf("%d", &n);
+    printf("Enter the array elements:");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+    start = clock();
+    merge_sort(a, 0, n - 1);
+    end = clock();
+    time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+    printf("Sorted array:");
+    for (i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+    printf("Time taken to sort: %f seconds\n", time_taken);
+    return 0;
 }
