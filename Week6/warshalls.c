@@ -1,51 +1,51 @@
-#include&lt;stdio.h&gt;
+#include<stdio.h>;
 int n;
 int a[10][10];
 int p[10][10];
 void write_data( )
 {
 int i,j;
-printf(&quot;The path matrix is shown below\n&quot;);
-for(i=0;i&lt;n;i++)
+printf("The path matrix is shown below\n");
+for(i=0;i<n;i++)
 {
-for(j=0;j&lt;n;j++)
+for(j=0;j<n;j++)
 {
-printf(&quot;%d&quot;, p[i][j]);
-printf(&quot; &quot;);
+printf("%d", p[i][j]);
+printf(" ");
 }
-printf(&quot;\n&quot;);
+printf("\n");
 }
 }
 void read_data( )
 {
 int i,j;
-printf(&quot;Enter the no of nodes\n&quot;);
-scanf(&quot;%d&quot;, &amp;n);
-printf(&quot;Enter the adjacency matrix\n&quot;);
-for(i=0;i&lt;n;i++)
+printf("Enter the no of nodes\n");
+scanf("%d", &n);
+printf("Enter the adjacency matrix\n");
+for(i=0;i<n;i++)
 {
-for(j=0;j&lt;n;j++)
+for(j=0;j<n;j++)
 {
-scanf(&quot;%d&quot;, &amp;a[i][j]);
+scanf("%d", &a[i][j]);
 }
 }
 }
 void path_matrix( )
 {
 int i,j,k;
-for(i=0;i&lt;n;i++)
+for(i=0;i<n;i++)
 {
-for(j=0;j&lt;n;j++)
+for(j=0;j<n;j++)
 p[i][j]=a[i][j];
 }
-for(k=0;k&lt;n;k++)
+for(k=0;k<n;k++)
 {
-for(i=0;i&lt;n;i++)
+for(i=0;i<n;i++)
 {
-for(j=0;j&lt;n;j++)
+for(j=0;j<n;j++)
 
 {
-if((p[i][k]==1 &amp;&amp; p[k][j]==1))
+if((p[i][k]==1 & p[k][j]==1))
 p[i][j]=1;
 }
 }
