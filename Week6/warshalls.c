@@ -1,8 +1,9 @@
-#include<stdio.h>;
+#include<stdio.h>
 int n;
 int a[10][10];
 int p[10][10];
-void write_data( )
+
+void write_data()
 {
 int i,j;
 printf("The path matrix is shown below\n");
@@ -16,7 +17,8 @@ printf(" ");
 printf("\n");
 }
 }
-void read_data( )
+
+void read_data()
 {
 int i,j;
 printf("Enter the no of nodes\n");
@@ -30,7 +32,8 @@ scanf("%d", &a[i][j]);
 }
 }
 }
-void path_matrix( )
+
+void path_matrix()
 {
 int i,j,k;
 for(i=0;i<n;i++)
@@ -51,10 +54,10 @@ p[i][j]=1;
 }
 }
 }
+
 void main( )
 {
 read_data();
 path_matrix();
 write_data();
-getch();
 }
