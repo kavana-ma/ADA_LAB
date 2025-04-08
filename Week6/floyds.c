@@ -1,4 +1,4 @@
-#include <stdio.h>;
+#include <stdio.h>
 int a[10][10],D[10][10],n;
 void floyd(int [][10],int);
 int min(int,int);
