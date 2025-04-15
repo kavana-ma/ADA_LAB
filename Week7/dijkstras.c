@@ -2,7 +2,6 @@
 void main()
 {
 int i,j,n,v,k,min,u,c[20][20],s[20],d[20];
-clrscr();
 printf("\n Enter the no. of vertices : ");
 scanf("%d",&n);
 printf("\n Enter the cost adjacency matrix : ");
