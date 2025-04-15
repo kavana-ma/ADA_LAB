@@ -33,7 +33,6 @@ return ((a>b)?a:b);
 }
 void main()
 {
-clrscr();
 printf("\n Enter the no. of objects : ");
 scanf("%d",&n);
 printf("\n Enter the weights : ");
